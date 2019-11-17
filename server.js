@@ -17,7 +17,7 @@ app.use('/product', productRouter)
 app.use('/category', categoryRouter)
 
 app.get('/', (request, response) => {
-    response.send(`<h1 style="color: red; text-align: center; font-family: arial;">welcome to final applications web services</h1>`)
+    response.send(`<h1 style="color: green; text-align: center; font-family: arial;">welcome to final applications web services</h1>`)
 })
 
 app.listen(4000, '0.0.0.0', () => {
