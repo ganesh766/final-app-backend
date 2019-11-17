@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # download the node modules
-npm install
+# npm install
 
 # remove the container if exists or running 
 if [ $(docker container ls -q --filter name=my_app_backend_container) != '' ]; then

@@ -13,6 +13,9 @@ WORKDIR /app
 # copy all the files including node_modules directory
 COPY . .
 
+# install npm
+RUN npm install
+
 # EXPOSE PORT 4000
 EXPOSE 4000
 
