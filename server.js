@@ -3,6 +3,7 @@ const bodyParser = require('body-parser')
 
 // get the routers
 const productRouter = require('./product')
+const categoryRouter = require('./category')
 
 const app = express()
 app.use(function(req, res, next) {
@@ -12,7 +13,8 @@ app.use(function(req, res, next) {
     next();
 });
 app.use(bodyParser.json())
-app.use(productRouter)
+app.use('/product', productRouter)
+app.use('/category', categoryRouter)
 
 app.get('/', (request, response) => {
     response.send(`<h1 style="color: red; text-align: center; font-family: arial;">welcome to final applications web services</h1>`)

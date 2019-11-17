@@ -1,13 +1,14 @@
 # download the required node base image
-FROM node
+FROM my_node_image
 
 # set the work directory
 WORKDIR /app
 
+# RUN: executes the command(s) while building the image
 # install npm
 # RUN apt-get update
 # RUN apt-get install npm
-RUN apt-get update && apt-get install npm -y
+# RUN apt-get update && apt-get install npm nodejs -y
 
 # copy all the files including node_modules directory
 COPY . .
@@ -15,5 +16,6 @@ COPY . .
 # EXPOSE PORT 4000
 EXPOSE 4000
 
+# RUN: executes the command(s) while starting the container
 # start the express server
 CMD node server.js
