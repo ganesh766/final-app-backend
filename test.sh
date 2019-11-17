@@ -4,7 +4,7 @@
 # npm install
 
 # remove the container if exists or running 
-if [ $(docker container ls -q --filter name=my_app_backend_container) != '' ]; then
+if [ $(docker container ls -q -a --filter name=my_app_backend_container) != '' ]; then
     docker container stop my_app_backend_container
     docker container rm my_app_backend_container
 fi

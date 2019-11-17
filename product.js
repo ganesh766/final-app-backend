@@ -6,7 +6,7 @@ const router = express.Router()
 
 router.get('/', (request, response) => {
     const connection = db.connect()
-    const statement = `select * from product`
+    const statement = `select product.*, category.title as category_title from product, category where product.category_id = category.id `
     connection.query(statement, (error, data) => {
         connection.end()
         response.send(utils.createResult(error, data))
