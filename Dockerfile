@@ -7,7 +7,7 @@ WORKDIR /app
 # install npm
 # RUN apt-get update
 # RUN apt-get install npm
-RUN apt-get update && apt-get install npm
+RUN apt-get update && apt-get install npm -y
 
 # copy all the files including node_modules directory
 COPY . .
